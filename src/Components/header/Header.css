@@ -1,0 +1,188 @@
+.the {
+    width: fit-content;
+    height: fit-content;
+    transform: matrix(0, -1, 1, 0, 0, 0);
+    font-size: 21px;
+    color: #000000;
+    padding-top: 14px;
+    margin-right: 10px;
+  }
+  .siren {
+    display: flex;
+    align-items: center;
+    width: 190px;
+    height: 60px;
+    font: normal normal bold 71px Montserrat;
+  }
+ 
+  .nav,
+  .openNav {
+    width: 85%;
+    font-size: 22px;
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+    margin: auto;
+    padding-bottom: 10px;
+    border-bottom: 2px solid  rgb(207, 199, 199);
+    align-items: center;
+    margin-bottom: 20px;
+
+  }
+  /* hamburger */
+  .hamburger {
+    display: none;
+  }
+  @media (max-width: 880px) {
+    .nav {
+      font-size: 20px;
+    }
+  }
+  @media (max-width: 650px) {
+    
+    .siren {
+      font: normal normal bold 35px/29px Montserrat;
+    }
+    .the {
+      width: fit-content;
+      height: fit-content;
+      transform: matrix(0, -1, 1, 0, 0, 0);
+      font-size: 11px;
+      color: #000000;
+      padding-top: 14px;
+      margin-right: 10px;
+      margin-top: 10px;
+      padding-bottom: 5px;
+    }
+   
+    .navbar {
+      display: flex;
+      justify-content: space-around;
+      height: 80px;
+      align-items: center;
+      width: 80%;
+      margin: auto;
+    }
+    
+    .nav {
+      display: none;
+    }
+    .openNav {
+      background: #deccd5;
+    box-shadow: 0 -0.3px 0.5px 0 #333030;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    height: 200px;
+    line-height: 25px;
+    position: relative;
+    /* right: -358px; */
+    text-decoration: none;
+    top: -31px;
+    width: 373px;
+    z-index: 2;
+  
+    }
+    
+    
+    
+    .openNav > .nonActiveNav:nth-child(n) {
+      width: 100vw;
+      text-align: center;
+      border-bottom: 1px solid rgb(162, 161, 161);
+    }
+  
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 41px;
+      height: 30px;
+      
+      position: absolute;
+      right: 1em;
+      top: 11px;
+    }
+  .hamburger:hover{
+    cursor: pointer;
+  }
+    .closeHamburger:nth-child(1) {
+        height: 16.6%;
+        background: rgb(51, 48, 48);
+        animation: Open1 1s ease-out 0s forwards;
+    }
+    @keyframes Open1 {
+      0% {
+        width: 28px;
+        transform: rotate(-60deg);
+        transform-origin: right center;
+      }
+      100% {
+        width: 40px;
+        transform: rotate(0deg);
+        transform-origin: right center;
+      }
+    }
+    .closeHamburger:nth-child(2) {
+      height: 16.6%;
+      background: rgb(51, 48, 48);
+      animation: Open2 1s ease-out 0s forwards;
+      animation-duration: 1s;
+    }
+    @keyframes Open2 {
+      0% {
+        width: 0px;
+        visibility: hidden;
+        transform-origin: right center;
+      }
+      100% {
+        visibility: visible;
+        width: 40px;
+        display: flex;
+      }
+    }
+    .closeHamburger:nth-child(3) {
+      height: 16.6%;
+      background: rgb(51, 48, 48);
+      animation: Open3 1s ease-out 0s forwards;
+    }
+    @keyframes Open3 {
+      0% {
+        width: 28px;
+        transform: rotate(60deg);
+        transform-origin: right center;
+      }
+      100% {
+        width: 40px;
+        transform: rotate(0deg);
+        transform-origin: right center;
+      }
+    }
+    .openHamburger:nth-child(2) {
+      display: none;
+    }
+    .openHamburger:nth-child(1) {
+      width: 28px;
+      height: 16.6%;
+      background: rgb(51, 48, 48);
+      animation: Cross1 1s ease-out 0s forwards;
+    }
+    @keyframes Cross1 {
+      100% {
+        transform: rotate(-60deg);
+        transform-origin: right center;
+      }
+    }
+    .openHamburger:nth-child(3) {
+      width: 28px;
+      height: 16.6%;
+      animation: cross2 0.5s ease-out 0s 1 forwards;
+      background: rgb(51, 48, 48);
+    }
+    @keyframes cross2 {
+      100% {
+        transform: rotate(60deg);
+        transform-origin: right center;
+      }
+    }
+  }

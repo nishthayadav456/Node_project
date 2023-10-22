@@ -1,38 +1,526 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  box-sizing: border-box;
+  
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+#The{
+  font-size: 25px;
+   transform: rotate(-90deg);
+}
+#siren{
+  font-size: 40px;
+  font-weight: bolder;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.home{
+  text-decoration: none;
+  color:black   
+}
+.home:hover{
+  color: grey;
+}
+.tech{
+  text-decoration: none;
+  color:black   
+}
+.tech:hover{
+  color: grey;
+}
+.bollywood{
+  text-decoration: none;
+  color:black  
+}
+.bollywood:hover{
+  color: grey;
+}
+.hollywood{
+  text-decoration: none;
+  color:black   
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.hollywood:hover{
+  color: grey;
+}
+.fit{
+  text-decoration: none;
+  color:black     
+}
+.fit:hover{
+  color: grey;
+}
+.food{
+  text-decoration: none;
+  color:black     
+}
+.food:hover{
+  color: grey;
+}
+a{
+  text-decoration: none;
+  color:black     
+}
+
+/* All component */
+
+.Mainparent{
+  display: flex;
+  justify-content: space-around;
+ 
+ 
+}
+.right{
+
+width:650px;
+position: relative;
+
+
+}
+
+.head{
+  position: absolute;
+  left: 314px;
+  font-weight: bolder;
+  width: 200px;
+
+
+
+}
+.description{
+  position: absolute;
+  left: 311px;
+  top: 60px;
+  width: 324px;
+  height: 120px;
+ 
+ 
+}
+.middle{
+height:220px;
+margin-bottom: 50px;
+position: relative;
+border-bottom: 2px solid rgb(207, 199, 199);
+
+}
+.middle1{
+  height:155px; 
+  margin-bottom: 20px;
+  border-bottom: 2px solid  rgb(207, 199, 199);
+ 
+}
+
+.underhr{
+  width:80px;
+  background-color: rgb(213, 73, 73);
+  height:3px;
+  border:none;
+  margin-bottom:20px;
+} 
+.left{
+  position: relative;
+ 
+  
+ 
+}
+
+
+.head1{
+  position: absolute;
+  font-weight: 600;
+ left:220px;
+  width: 100px;
+ 
+
+ 
+}
+
+.counter{
+  color: #c5c5c5;
+  font-size: 40px;
+  position: absolute;
+  right:10px;
+  top:40px;
+  display:inline-block;
+}
+.btn1{
+  height: 50px;
+  width: 7%;
+  font-size: 20px;
+  border-radius: 5px;
+  margin-left: 180px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+.advertisement{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+  width: 350px;
+  border: 1px solid black;
+ 
+ 
+  
+}
+#secondimage{
+  height:700px;
+  width:420px;
+}
+#bimage{
+  width:300px;
+   height:200px
+}
+#bimage1{
+width:200px;
+height:150px  
+}
+/* phone view */
+@media screen and  (max-width:580px){
+  .App{
+      display: flex;
+    justify-content: flex-start;
+      
   }
-  to {
-    transform: rotate(360deg);
+  #The{
+      font-size: 25px;
+       transform: rotate(-90deg);
   }
+  #siren{
+      font-size: 34px;
+      font-weight: bolder;
+      
+  }
+ 
+  .home{
+      text-decoration: none;
+      color:black   
+  }
+  .home:hover{
+      color: grey;
+  }
+  .tech{
+      text-decoration: none;
+      color:black   
+  }
+  .tech:hover{
+      color: grey;
+  }
+  .bollywood{
+      text-decoration: none;
+      color:black  
+  }
+  .bollywood:hover{
+      color: grey;
+  }
+  .hollywood{
+      text-decoration: none;
+      color:black   
+  }
+  
+  .hollywood:hover{
+      color: grey;
+  }
+  .fit{
+      text-decoration: none;
+      color:black     
+  }
+  .fit:hover{
+      color: grey;
+  }
+  .food{
+      text-decoration: none;
+      color:black     
+  }
+  .food:hover{
+      color: grey;
+  }
+  a{
+      text-decoration: none;
+      color:black     
+  }
+  
+  
+  /* All component */
+  
+  .Mainparent{
+      display: flex;
+      justify-content: space-around;
+     
+      flex-direction: column;
+      align-items: center;
+  }
+  .right{
+  
+      width: 350px;
+      position: relative;
+    
+ 
+  
+  }
+  
+  .head{
+      position: absolute;
+      left: 164px;
+      font-weight: bolder;
+      width: 174px;
+
+  
+  
+  }
+  .description{
+      position: absolute;
+      left: 162px;
+      top: 60px;
+      width: 176px;
+      height: 120px;
+    
+     
+  }
+  .middle{
+      height: 210px;
+      margin-bottom: 30px;
+  position: relative;
+  
+  }
+  .middle1{
+      height:180px; 
+   
+  }
+ 
+  .left{
+      position: relative;
+     
+      width:351px;
+    
+     
+  }
+  
+  #toppost{
+      position: absolute;
+      top: 206px;
+      right: 416px;
+      
+  }
+  .head1{
+      position: absolute;
+      font-weight: 600;
+      left:220px;
+       width: 100px;
+      
+   }
+  
+  
+  .counter{
+      color: #c5c5c5;
+      font-size: 40px;
+      position: absolute;
+      right:10px;
+      display:inline-block;
+  }
+  .btn1{
+      height: 50px;
+      width: 7%;
+      font-size: 20px;
+      border-radius: 5px;
+      margin-left: 180px;
+      margin-bottom: 30px;
+      cursor: pointer;
+  }
+  .advertisement{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 700px;
+      width: 350px;
+      border: 1px solid black;
+     margin-bottom: 15px;
+     
+      
+  }
+  #secondimage{
+      height:700px;
+      width:350px;
+  }
+  #bimage{
+      width: 150px;
+      height: 200px;
+  }
+  #bimage1{
+      width: 184px;
+      height: 150px;
+  }
+
+}
+@media screen and (min-width:581px) and (max-width:825px) {
+  .App{
+      display: flex;
+      justify-content: center;
+  }
+  #The{
+      font-size: 25px;
+       transform: rotate(-90deg);
+  }
+  #siren{
+      font-size: 40px;
+      font-weight: bolder;
+      
+  }
+  
+  .home{
+      text-decoration: none;
+      color:black   
+  }
+  .home:hover{
+      color: grey;
+  }
+  .tech{
+      text-decoration: none;
+      color:black   
+  }
+  .tech:hover{
+      color: grey;
+  }
+  .bollywood{
+      text-decoration: none;
+      color:black  
+  }
+  .bollywood:hover{
+      color: grey;
+  }
+  .hollywood{
+      text-decoration: none;
+      color:black   
+  }
+  
+  .hollywood:hover{
+      color: grey;
+  }
+  .fit{
+      text-decoration: none;
+      color:black     
+  }
+  .fit:hover{
+      color: grey;
+  }
+  .food{
+      text-decoration: none;
+      color:black     
+  }
+  .food:hover{
+      color: grey;
+  }
+  a{
+      text-decoration: none;
+      color:black     
+  }
+  
+  /* All component */
+  
+  .Mainparent{
+      display: flex;
+      justify-content: space-around;
+    
+     
+  }
+  .right{
+  
+      width: 361px;
+  position: relative;
+
+  }
+  
+  .head{
+      position: absolute;
+      left: 190px;
+      font-weight: bolder;
+      width: 165px;
+ 
+  
+  
+  }
+  .description{
+      position: absolute;
+      left: 194px;
+      top: 60px;
+      width: 158px;
+      height: 120px;
+      
+     
+  }
+  .middle{
+  height:220px;
+  margin-bottom: 50px;
+  position: relative;
+
+  }
+  .middle1{
+      height:180px; 
+     
+  }
+ 
+  .left{
+      position: relative;
+    
+      width: 311px;
+     
+  }
+  
+  
+  .head1{
+      position: absolute;
+      font-weight: 600;
+      left: 175px;
+      width: 119px;
+    
+  
+     
+  }
+  
+  .counter{
+      color: #c5c5c5;
+      font-size: 40px;
+      position: absolute;
+      right:10px;
+      top:40px;
+      display:inline-block;
+  }
+  .btn1{
+      height: 50px;
+      width: 7%;
+      font-size: 20px;
+      border-radius: 5px;
+      margin-left: 180px;
+      margin-bottom: 30px;
+      cursor: pointer;
+  }
+  .advertisement{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 568px;
+      width: 310px;
+      border: 1px solid black;
+     
+     
+      
+  }
+  #secondimage{
+      height: 700px;
+  width: 317px;
+  }
+  #bimage{
+      width: 174px;
+      height: 200px;
+  }
+  #bimage1{
+      width: 161px;
+      height: 150px;
+  } 
 }

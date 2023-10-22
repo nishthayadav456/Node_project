@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import NavBar from './Components/NavBar';
+import ContextStore from './Components/ContextStore';
+
+
+
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+
+  <div className='App'>
+  <span id="The">The</span> <span id="siren">Siren</span>
+  </div>
+  <br/><br/>
+
+  <ContextStore>
+  <NavBar/>
+ 
+</ContextStore>
+
+
+</>
   );
 }
 
 export default App;
+
+
