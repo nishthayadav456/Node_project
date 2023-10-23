@@ -1,6 +1,6 @@
 import {useState,useEffect} from 'react'
 import './Style.css';
-
+import axios from 'axios';
 import MainPage from './MainPage';
 import { NavLink } from 'react-router-dom';
 import Footer from './Footer/Footer';
@@ -26,14 +26,14 @@ export default Home
 function Latest(){
     const [data,setData]=useState([])
     useEffect(()=>{
-
-        fetch("https://node-api-g7ph.onrender.com" ,{
-            method:"GET"
-        })
-        .then((response)=>response.json())
-        .then ((data1)=> setData(data1) )
+       
+       axios.get("https://node-api-g7ph.onrender.com/api/home")
+       .then((response)=>
+       setData(response.data)
+       )
         .catch((error)=> console.log(error))
        },[])
+       console.log(data)
     // const[ContextData]=useContext(Store);
     // console.log(ContextData)
     return(
@@ -41,8 +41,9 @@ function Latest(){
        
        <h1 className='thelatest'>The Latest <hr className='underhr'/></h1>
         <div className='homelatest'>
-           
-        {data.filter((item)=>item.id%20===0 ).map((item,index)=>{
+      
+
+         {data.filter((item)=>item.id%20===0 ).map((item,index)=>{
             console.log(item)
             return(
                  <>
@@ -58,7 +59,7 @@ function Latest(){
                    </div>
                   </>
             )
-        })}
+        })} 
         </div>
          </>
     )
@@ -66,12 +67,11 @@ function Latest(){
 function TopStories(){
     const [data,setData]=useState([])
     useEffect(()=>{
-
-        fetch("https://node-api-g7ph.onrender.com" ,{
-            method:"GET"
-        })
-        .then((response)=>response.json())
-        .then ((data1)=> setData(data1) )
+       
+       axios.get("https://node-api-g7ph.onrender.com/api/home")
+       .then((response)=>
+       setData(response.data)
+       )
         .catch((error)=> console.log(error))
        },[])
     // const[ContextData]=useContext(Store);

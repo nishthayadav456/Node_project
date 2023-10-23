@@ -13,7 +13,7 @@ function Bollywood(){
        setData(response.data)
        )
         .catch((error)=> console.log(error))
-       },[])
+       })
 // const [ContextData]=useContext(Store)
 // console.log(ContextData)
 

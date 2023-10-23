@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import NavBar from './Components/NavBar';
-import ContextStore from './Components/ContextStore';
+
 
 
 
@@ -18,10 +18,10 @@ function App() {
   </div>
   <br/><br/>
 
-  <ContextStore>
+
   <NavBar/>
  
-</ContextStore>
+
 
 
 </>

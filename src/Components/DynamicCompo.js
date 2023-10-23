@@ -1,17 +1,30 @@
-import { useContext } from "react"
+
 import { useNavigate, useParams } from "react-router-dom"
-import { Store } from "./ContextStore"
+import { useState } from "react"
+import { useEffect } from "react"
+import axios from "axios"
+
 import { NavLink } from "react-router-dom"
 
 import './Style.css'
 function DynamicCompo(){
+  const [data,setData]=useState([])
+  useEffect(()=>{
+     
+     axios.get("https://node-api-g7ph.onrender.com/api/home")
+     .then((response)=>
+     setData(response.data)
+     )
+      .catch((error)=> console.log(error))
+     },[])
+     console.log(data)
     const id=useParams().id
-    const [datacontext]=useContext(Store)
+    // const [datacontext]=useContext(Store)
     // console.log(datacontext)
     console.log(typeof id)
     const nav=useNavigate()
     
-    const dRouteData=datacontext[id].Category
+    const dRouteData=data[id]?.Category
     console.log(dRouteData)
     return(
         <>
@@ -24,7 +37,7 @@ function DynamicCompo(){
                 <div  className="share-icons">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV6F73IVEoRP9k2YgunZ64wyoueHakwAWDj1O9QZc&s" alt="Not found" style={{width:"30px", height:"25px"}}/> 
                  Share</div>
-       {datacontext.filter((item)=>item.id===parseInt(id)).map((item,index)=>{
+       {data.filter((item)=>item.id===parseInt(id)).map((item,index)=>{
             return(
               
                 <div className="container1" key={index}>
@@ -67,7 +80,7 @@ function DynamicCompo(){
          </div>
            <div className="Lower-heading"> More from the Shiren <hr className="Shiren-hr"/> </div>
             <div className="Lower-Item">
-                {datacontext.filter((item)=>(item.Category===dRouteData) && (item.id%15 ===1 || item.id%16===2 || item.id%17===3)).map((item,index)=>{
+                {data.filter((item)=>(item.Category===dRouteData) && (item.id%15 ===1 || item.id%16===2 || item.id%17===3)).map((item,index)=>{
                       return(
                       <div  className="Limage"key={index}>
                     <NavLink to={`/DynamicCompo/${item.id}`}>
